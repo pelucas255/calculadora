@@ -1,13 +1,17 @@
-def sumar(a, b):
-    return a + b
+import math
 
-def restar(a, b):
-    return a - b
-
-def multiplicar(a, b):
-    return a * b
-
-def dividir(a, b):
-    if b == 0:
-        return "Error: División por cero"
-    return a / b
+def raiz_cuadrada(numero):
+    """
+    Calcula la raíz cuadrada de un número dado.
+    
+    Excepciones:
+    - TypeError: Si el argumento no es de tipo int o float.
+    - ValueError: Si el número es negativo.
+    """
+    if not isinstance(numero, (int, float)):
+        raise TypeError("El valor debe ser un número (entero o flotante).")
+    
+    if numero < 0:
+        raise ValueError("No se puede calcular la raíz cuadrada de un número negativo.")
+        
+    return math.sqrt(numero)
