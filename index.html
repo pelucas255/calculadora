@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora chidota - Alexis Esponda</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; display: inline-block; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        input, button { padding: 10px; margin: 10px; font-size: 16px; }
+        .result { font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Calculadora de Raíz Cuadrada (Alexis Esponda)</h2>
+        <input type="number" id="numero" placeholder="Ingresa un número">
+        <br>
+        <button onclick="calcularRaiz()">Calcular Raíz</button>
+        <p class="result" id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularRaiz() {
+            let num = document.getElementById('numero').value;
+            let res = document.getElementById('resultado');
+            if (num < 0) {
+                res.innerText = "Error: No se puede con negativos";
+                res.style.color = "red";
+            } else {
+                let calculo = Math.sqrt(num);
+                res.innerText = "Resultado: " + calculo;
+                res.style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
