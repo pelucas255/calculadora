@@ -1,12 +1,10 @@
-from calculator import sumar, restar, multiplicar, dividir
+from calculator import raiz_cuadrada
 
 def main():
-    print("--- Calculadora Simple ---")
-    a, b = 10, 5
-    print(f"Suma ({a} + {b}) = {sumar(a, b)}")
-    print(f"Resta ({a} - {b}) = {restar(a, b)}")
-    print(f"Multiplicación ({a} * {b}) = {multiplicar(a, b)}")
-    print(f"División ({a} / {b}) = {dividir(a, b)}")
+    print("--- Calculadora Alumno 5: Raíz Cuadrada ---")
+    numero = 25
+    resultado = raiz_cuadrada(numero)
+    print(f"La raíz cuadrada de {numero} es {resultado}")
 
 if __name__ == "__main__":
     main()
