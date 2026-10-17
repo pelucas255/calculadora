@@ -3,8 +3,8 @@ from calculator import raiz_cuadrada
 
 # 1. Caso correcto
 def test_raiz_cuadrada_correcto():
-  assert raiz_cuadrada(25) == 99.0  # <--- Error provocado a propósito
-  assert raiz_cuadrada(9) == 3.0
+    assert raiz_cuadrada(25) == 5.0
+    assert raiz_cuadrada(9) == 3.0
 
 # 2. Caso límite
 def test_raiz_cuadrada_limite():
